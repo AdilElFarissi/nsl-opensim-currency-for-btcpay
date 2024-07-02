@@ -22,7 +22,7 @@ This is a modified version of DTL/NSL Secure Money Server by [Fumi.Iseki and NSL
 + A correctly installed and synced BTCPay instance with a correctly set store and wallet. Those can be self-hosted or installed on a VPS... or you can use a third-party host without installations (not recommanded!). more infos here:
 https://docs.btcpayserver.org/Deployment/
 
-+ A PHP server under https (important! don't use without TLS/SSL). Due to the removal of the xmlrpc-encode/decode and the json_encode/decode functions in PHP8 without a replacement, the max compatible PHP version is the last PHP7. The PHP part do not work with PHP8.
++ An PHP server under https (important! don't use without TLS/SSL). Due to the removal of the xmlrpc-encode/decode and the json_encode/decode functions in PHP8 without a replacement, the max compatible PHP version is the last PHP7. The PHP part do not work with PHP8.
 
 + Opensimulator >= v0.9.3 (SSL/TLSed recommanded).
 
