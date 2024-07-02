@@ -30,9 +30,9 @@ https://docs.btcpayserver.org/Deployment/
 This version is compatible with [Firestorm](http://firestormviewer.org/) Viewer that allows the display of the crypto amounts in the Buy Currency and lands windows... The currency and lands purchases using the viewer windows may not work in the others!
 As solution, i added a web interface for the currency purchases and withdrawals to what you can point your end-user. Is also possible to sell/buy back the local currency using LSL scripts (scripts not included!)...
 + For the currency buy:
-https://your-domain-or-ip.here/helper_scripts/helper/currency-buy.php
+<pre>https://your-domain-or-ip.here/helper_scripts/helper/currency-buy.php</pre>
 + For the withdrawals:
-https://your-domain-or-ip.here/helper_scripts/helper/withdrawals.php
+<pre>https://your-domain-or-ip.here/helper_scripts/helper/withdrawals.php</pre>
 
 ### Installation
 The installation depend on your operating system and if a compilation is needed but in general is the same for all OS.
@@ -41,7 +41,8 @@ The installation depend on your operating system and if a compilation is needed 
 
 1. Copy the content of the "ready-bin" folder to "opensim-0.9.3/bin" in linux or "opensim-0.9.3\bin" in windows
 
-2. Upload or copy the "helper_scripts" folder to your PHP7 web server. You can change the folder name if you want... the "helper" folder must be accessible eg; https://your-domain-or-ip.here/helper_scripts/helper/
+2. Upload or copy the "helper_scripts" folder to your PHP7 web server. You can change the folder name if you want... the "helper" folder must be accessible eg;
+<pre>https://your-domain-or-ip.here/helper_scripts/helper/</pre>
 
 
 ### Compiling
@@ -151,21 +152,22 @@ Note: Please do your best to protect the "include" folder and the config.php fil
 </pre>
 When done and all started without problems, use Firestorm to test a currency purchase from the viewer. You can also use the web interfaces to test.
 + For the currency buy:
-https://your-domain-or-ip.here/helper_scripts/helper/currency-buy.php
+<pre>https://your-domain-or-ip.here/helper_scripts/helper/currency-buy.php</pre>
 + For the withdrawals:
-https://your-domain-or-ip.here/helper_scripts/helper/withdrawals.php
+<pre>https://your-domain-or-ip.here/helper_scripts/helper/withdrawals.php</pre>
 
 
 ### Web Interfaces.
 The currency purchases web interface can take 2 parameters that auto-fill the form:
 + account: Avatar UUID.
 + amount: The amount of local currency to buy.
+  
 So, you can point the user to this page using llLoadURL...
-https://your-domain-or-ip.here/helper_scripts/helper/currency-buy.php?account=UUID&amount=1234
+<pre>https://your-domain-or-ip.here/helper_scripts/helper/currency-buy.php?account=UUID&amount=1234</pre>
 
 The withdrawal web interface can take 1 parameter:
 + account : Avatar UUID.
-https://your-domain-or-ip.here/helper_scripts/helper/withdrawals.php?account=UUID
+<pre>https://your-domain-or-ip.here/helper_scripts/helper/withdrawals.php?account=UUID</pre>
 
 
 ### Attention.
