@@ -3,6 +3,8 @@
 ### Outline:
 This is a modified version of DTL/NSL Secure Money Server by [Fumi.Iseki and NSL](http://www.nsl.tuis.ac.jp) re-worked to interact with [BTCPay Server](https://github.com/btcpayserver/btcpayserver) as cryptocurrencies payment gateway and processor in a self-sovereign context, where you have 100% of the control and you are behind your own system without any fees or Third-parties... Freedom.
 
+[Proof of work video](https://www.youtube.com/watch?v=x7I-mgH-p0c)
+
 ### Change Log:
 + Upgraded to dotnet 8 (Cross-platforms, Compatible OpenSim >= 0.9.3).
 + Add support for standalones instances.
