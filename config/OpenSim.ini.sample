@@ -1,0 +1,40 @@
+ [Economy]
+  ; Set the economy module name.
+    EconomyModule = DTLNSLMoneyModule
+
+  ; Do you want to allow 0 currency transactions?
+    SellEnabled = true
+
+  ; Set your PHP web server URL pointing to the "helper" folder with "/" at the end.
+    Economy = "https://your-domain-or-ip.here/helper_scripts/helper/
+
+  ; Set the Money Server URL. Do not use 127.0.0.1 or localhost for CurrencyServer's address. This address is used for identification of user on Money Server.
+    CurrencyServer = "https://your-domain-or-ip.here:8008" 
+
+  ; Verify the server certificate? keep false... (buggy! may not work)
+    CheckServerCert = false
+
+  ; Set the module certificate and password.
+    ClientCertFilename = "SineWaveCert.pfx"
+    ClientCertPassword = "123"
+
+  ; Set the things prices...
+    PriceUpload = 10
+    PriceGroupCreate = 100
+  
+  ; Mesh upload factors 
+    MeshModelUploadCostFactor = 2.5
+    MeshModelUploadTextureCostFactor = 1.0
+    MeshModelMinCostFactor = 2.0
+
+  ; Set the minimum amount to buy currency from the system.
+    MinimumAmount = 250
+
+  ; Set the same secret key as MoneyScriptAccessKey in include/config.php and MoneyServer.ini
+    MoneyAccessKey  = "123456789"
+  
+  ; Avatar Class for HG Avatar
+  ; {ForeignAvatar, HGAvatar, GuestAvatar, LocalAvatar} HGAvatar
+  ; HG Avatar is assumed as a specified avatar class. Default is HGAvatar
+  ; Processing for each avatar class is dependent on Money Server settings.
+    HGAvatarAs = "HGAvatar"

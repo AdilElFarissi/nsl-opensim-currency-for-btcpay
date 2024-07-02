@@ -1,0 +1,46 @@
+###Change Log:
++ Upgraded to dotnet 8 (Cross-platforms, Compatible OpenSim >= 0.9.3).
++ Add support for OpenSim's standalones instances.
++ Add BTCPay related MySQL tables and their respective handlers.
++ Add TLS/SSL support to the region module server.
++ Replaced HttpWebRequest by HttpClient.
++ Add BTCPay related XMLRPC handlers and respective methods in the region module.
++ Add some security checks and verifications.
++ Many fixes and optimizations...
+
+###Requirements:
++ Opensimulator source code >= v0.9.3.
++ [dotnet 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+
+###Compiling
+1. Compile OpenSim.
+2. Place the "btcpay-opensim-currency" in the OpenSimulator source root folder.
++ In Windows, run or double click:
+# opensim-0.9.3-source\btcpay-opensim-currency\runprebuild.bat
+This will create the solution and produce a compile.bat files... run or double click:
+# opensim-0.9.3-source\btcpay-opensim-currency\compile.bat
+A successful compilation will add a "bin" folder inside "btcpay-opensim-currency" with the target sub-folder "net8.0" where you will find the Money Server executable and the module DLLs...
+# opensim-0.9.3-source\btcpay-opensim-currency\bin\net8.0\
+
++ In Linux&Co, is the same as Windows but the file extension is .sh
+ # cd opensim-0.9.3-source
+ # cd btcpay-opensim-currency
+ # ./runprebuild.sh
+ # ./compile.sh
+
+###Attention.
+This is unofficial software. Please do not inquire to OpenSim development team or DTL Currency Processing development team or NSL team about this software.
+
+###Exemption from responsibility.
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Use at your own risks!
+
+###Thanks where due.
+ + This is a modified version of DTL/NSL Secure Money Server by [Fumi.Iseki and NSL](http://www.nsl.tuis.ac.jp)
+ + Special thanks to [Fumi.Iseki and NSL Team](http://www.nsl.tuis.ac.jp).
+ + Special thanks to BTCPay Server Team.
+ + Special thanks to [OpenSimulator Team](http://opensimulator.org/).
+
+ Thank you very much!!!
+
