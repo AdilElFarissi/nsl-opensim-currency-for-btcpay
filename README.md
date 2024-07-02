@@ -61,7 +61,7 @@ A successful compilation will add a "bin" folder inside "btcpay-opensim-currency
   ./compile.sh
 </pre>
 
-### Setting
+### Settings
 1. Money Server
 
 Open "opensim-0.9.3/bin/MoneyServer.ini" or "opensim-0.9.3\bin\MoneyServer.ini" with a text editor or IDE.
@@ -78,7 +78,7 @@ Open "opensim-0.9.3/bin/MoneyServer.ini" or "opensim-0.9.3\bin\MoneyServer.ini" 
 
 2. Region Server
 
-Open "opensim-0.9.3/bin/OpenSim.ini" or "opensim-0.9.3\bin\OpenSim.ini" with a text editor or IDE and scroll down to the  [Economy] section. Open "opensim-config\OpenSim.ini.sample" copy/paste and modify what is needed. eg:
+Open "opensim-0.9.3/bin/OpenSim.ini" or "opensim-0.9.3\bin\OpenSim.ini" with a text editor or IDE and scroll down to the  [Economy] section. Open "config\OpenSim.ini.sample" copy/paste and modify what is needed. eg:
 <pre>
  [Economy]
   ; Set the economy module name.
