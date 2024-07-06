@@ -22,7 +22,7 @@ This is a modified version of DTL/NSL Secure Money Server by [Fumi.Iseki and NSL
 + A correctly installed and synced BTCPay instance with a correctly set store and wallet. Those can be self-hosted or installed on a VPS... or you can use a third-party host without installations (not recommanded!). more infos here:
 https://docs.btcpayserver.org/Deployment/
 
-+ An PHP server under https (important! don't use without TLS/SSL). Due to the removal of the xmlrpc-encode/decode and the json_encode/decode functions in PHP8 without a replacement, the max compatible PHP version is the last PHP7. The PHP part do not work with PHP8.
++ A PHP server under https (important! don't use without TLS/SSL). Due to the removal of the xmlrpc functions in PHP 8, the max compatible PHP version is the last PHP 7.4. The PHP part do not work with PHP 8.
 
 + Opensimulator >= v0.9.3 (SSL/TLSed recommanded).
 
@@ -34,10 +34,10 @@ As solution, i added a web interface for the currency purchases and withdrawals 
 + For the withdrawals:
 <pre>https://your-domain-or-ip.here/helper_scripts/helper/withdrawals.php</pre>
 
-### Installation
+### Installation:
 The installation depend on your operating system and if a compilation is needed but in general is the same for all OS.
 
-0. You need an SSL/TLS valid or self-signed Pkcs12 certificate (.pfx or .p12 extension). Please don't use this software if the server/module/php are not under https! this trilogy exchange some sensive data and is all what a malicious person need to harm! not only in the money level!!!
+0. You need an SSL/TLS valid or self-signed Pkcs12 certificate (.pfx or .p12 extension). Please don't use this software if the server/module/php are not under https! this trilogy exchange some sensive data and is all what a malicious person need to harm! not only in the money level!!!. You can install and use "[Certify The Web](https://certifytheweb.com/)" in Windows or "[CertBot](https://certbot.eff.org/instructions)" in Linux&Co to get free and valid let's encrypt certificates... both have option for the automatic renewal.
 
 1. Copy the content of the "ready-bin" folder to "opensim-0.9.3/bin" in linux or "opensim-0.9.3\bin" in windows
 
@@ -45,7 +45,7 @@ The installation depend on your operating system and if a compilation is needed 
 <pre>https://your-domain-or-ip.here/helper_scripts/helper/</pre>
 
 
-### Compiling
+### Compiling:
 Compile OpenSim first and place the "btcpay-opensim-currency" in the OpenSimulator source root folder.
 + In Windows, run or double click
 <pre>opensim-0.9.3-source\btcpay-opensim-currency\runprebuild.bat</pre>
@@ -62,7 +62,7 @@ A successful compilation will add a "bin" folder inside "btcpay-opensim-currency
   ./compile.sh
 </pre>
 
-### Settings
+### Settings:
 1. Money Server
 
 Open "opensim-0.9.3/bin/MoneyServer.ini" or "opensim-0.9.3\bin\MoneyServer.ini" with a text editor or IDE.
@@ -130,7 +130,7 @@ Open "/helper_scripts/include/config.php", read the guides "comments" and follow
 
 Note: Please do your best to protect the "include" folder and the config.php file with  strict permissions and htaccess if supported.
 
-### Execution
+### Execution:
 1. Standalones:
 + In windows, run or double click MoneyServer.exe before OpenSim.exe.
 + In linux&Co:
@@ -157,7 +157,7 @@ When done and all started without problems, use Firestorm to test a currency pur
 <pre>https://your-domain-or-ip.here/helper_scripts/helper/withdrawals.php</pre>
 
 
-### Web Interfaces.
+### Web Interfaces:
 The currency purchases web interface can take 2 parameters that auto-fill the form:
 + account: Avatar UUID.
 + amount: The amount of local currency to buy.
@@ -170,19 +170,19 @@ The withdrawal web interface can take 1 parameter:
 <pre>https://your-domain-or-ip.here/helper_scripts/helper/withdrawals.php?account=UUID</pre>
 
 
-### Attention.
+### Attention:
 This is unofficial software. Please do not inquire to OpenSim development team or DTL Currency Processing development team or NSL team about this. 
 
-### Exemption from responsibility.
+### Exemption From Responsibility.
 THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Use at your own risks!
 
-### Thanks where due.
- + This is a modified version of DTL/NSL Secure Money Server by [Fumi.Iseki and NSL](http://www.nsl.tuis.ac.jp)
+### Thanks Where Due.
+ + This is a modified version of DTL/NSL Secure Money Server by [Fumi.Iseki and NSL](http://www.nsl.tuis.ac.jp).
  + Special thanks to [Fumi.Iseki and NSL Team](http://www.nsl.tuis.ac.jp).
- + Special thanks to BTCPay Server Team.
- + Special thanks to [OpenSimulator Team](http://opensimulator.org/).
+ + Special thanks to @NicolasDorier, @dennisreimann, @Kukks and all [BTCPay Server Team](https://github.com/btcpayserver/btcpayserver/graphs/contributors).
+ + Special thanks to [OpenSimulator Team](http://opensimulator.org/wiki/Development_Team).
 
 Thank you very much!!!
 
