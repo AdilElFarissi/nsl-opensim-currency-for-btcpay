@@ -130,10 +130,10 @@ Open "opensim-0.9.3/bin/OpenSim.ini" or "opensim-0.9.3\bin\OpenSim.ini" with a t
  Additional settings:
  + In standalones, open
  <pre>opensim-0.9.3\bin\config-include\StandaloneCommun.ini</pre>
- Set your local currency symbole under LoginService => currency and the helper_scripts url under GridInfoService => economy
+ Set your local currency symbole under LoginService => Currency and the helper_scripts url under GridInfoService => economy
  <pre>
    [LoginService]
-    currency = "OS$"
+    Currency = "OS$"
    [GridInfoService]
     economy = "https://your-domain-or-ip.here/helper_scripts/helper/"
  </pre>
@@ -141,10 +141,10 @@ Open "opensim-0.9.3/bin/OpenSim.ini" or "opensim-0.9.3\bin\OpenSim.ini" with a t
 <pre>opensim-0.9.3\bin\Robust.ini
 or
 opensim-0.9.3\bin\Robust.HG.ini</pre>
-Set your local currency symbole under LoginService => currency and the helper_scripts url under GridInfoService => economy
+Set your local currency symbole under LoginService => Currency and the helper_scripts url under GridInfoService => economy
  <pre>
    [LoginService]
-    currency = "OS$"
+    Currency = "OS$"
    [GridInfoService]
     economy = "https://your-domain-or-ip.here/helper_scripts/helper/"
  </pre>
