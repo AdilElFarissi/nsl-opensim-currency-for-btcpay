@@ -76,6 +76,9 @@ Open "opensim-0.9.3/bin/MoneyServer.ini" or "opensim-0.9.3\bin\MoneyServer.ini" 
   - If you want to send money to another avatar by PHP script, you must set "true" to "enableScriptSendMoney" And please set "MoneyScriptAccessKey" and "MoneyScriptIPaddress". "MoneyScriptAccessKey" is Secret key of Helper Script. Specify same key in include/config.php and OpenSim.ini. "MoneyScriptIPaddress" is IP address of server that Helper Script execute at. Not specify 127.0.0.1. 
   
   - If you want to change Update Balance Messages (blue dialog), pleaase enable and rewrite "BalanceMessage..." valiables.
+  
+  - Set the TLS/SSL .pfx or .p12 certifcate and password.
+
 
 2. Region Server
 
@@ -122,13 +125,36 @@ Open "opensim-0.9.3/bin/OpenSim.ini" or "opensim-0.9.3\bin\OpenSim.ini" with a t
   ; Processing for each avatar class is dependent on Money Server settings.
     HGAvatarAs = "HGAvatar"
 </pre>
- Notes: Do not use 127.0.0.1 or localhost for CurrencyServer's address. This address is used for identification of user on Money Server.
+ > Notes: Do not use 127.0.0.1 or localhost for CurrencyServer's address. This address is used for identification of user on Money Server.
+
+ Additional settings:
+ + In standalones, open
+ <pre>opensim-0.9.3\bin\config-include\StandaloneCommun.ini</pre>
+ Set your local currency symbole under LoginService => currency and the helper_scripts url under GridInfoService => economy
+ <pre>
+   [LoginService]
+    currency = "OS$"
+   [GridInfoService]
+    economy = "https://your-domain-or-ip.here/helper_scripts/helper/"
+ </pre>
+ + In grids, open
+<pre>opensim-0.9.3\bin\Robust.ini
+or
+opensim-0.9.3\bin\Robust.HG.ini</pre>
+Set your local currency symbole under LoginService => currency and the helper_scripts url under GridInfoService => economy
+ <pre>
+   [LoginService]
+    currency = "OS$"
+   [GridInfoService]
+    economy = "https://your-domain-or-ip.here/helper_scripts/helper/"
+ </pre>
+
 
 3. PHP Helper Scripts
 
 Open "/helper_scripts/include/config.php", read the guides "comments" and follow the instructions to get/set what is needed for the BTCPay integration.
 
-Note: Please do your best to protect the "include" folder and the config.php file with  strict permissions and htaccess if supported.
+> Note: Please do your best to protect the "include" folder and the config.php file with  strict permissions and htaccess if supported.
 
 ### Execution:
 1. Standalones:
