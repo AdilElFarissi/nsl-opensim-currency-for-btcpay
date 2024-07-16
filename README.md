@@ -125,7 +125,9 @@ Open "opensim-0.9.3/bin/OpenSim.ini" or "opensim-0.9.3\bin\OpenSim.ini" with a t
   ; Processing for each avatar class is dependent on Money Server settings.
     HGAvatarAs = "HGAvatar"
 </pre>
- > Notes: Do not use 127.0.0.1 or localhost for CurrencyServer's address. This address is used for identification of user on Money Server.
+
+>[!IMPORTANT]
+>Do not use 127.0.0.1 or localhost for CurrencyServer's address. This address is used for identification of user on Money Server.
 
  Additional settings:
  + In standalones, open
@@ -154,7 +156,8 @@ Set your local currency symbole under LoginService => Currency and the helper_sc
 
 Open "/helper_scripts/include/config.php", read the guides "comments" and follow the instructions to get/set what is needed for the BTCPay integration.
 
-> Note: Please do your best to protect the "include" folder and the config.php file with  strict permissions and htaccess if supported.
+>[!warning]
+>Please do your best to protect the "include" folder and the config.php file with  strict permissions and htaccess if supported.
 
 ### Execution:
 1. Standalones:
